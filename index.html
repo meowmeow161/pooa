@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: pink;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+        }
+        h1 {
+            color: red;
+            font-size: 1.5em;
+        }
+        img {
+            width: 80%;
+            max-width: 200px;
+            margin-bottom: 15px;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 80%;
+            max-width: 200px;
+        }
+        #yesBtn {
+            background: red;
+            color: white;
+        }
+        #noBtn {
+            background: gray;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="cat_1.jpg" alt="cat">
+        <h1>My lovely pooa will you be my Valentine? 💖</h1>
+        <div class="buttons">
+            <button id="yesBtn" onclick="alert('Hehe I love you pooparr ❤️')">Yes</button>
+            <button id="noBtn" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("noBtn").style.left = `${x}px`;
+            document.getElementById("noBtn").style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
